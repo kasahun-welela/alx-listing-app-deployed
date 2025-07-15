@@ -6,7 +6,7 @@ export default function Home() {
           <h1 className="text-3xl md:text-6xl text-center font-bold mt-10">
             Find your favorite <br /> place here!
           </h1>
-          <p className="text-[18px] text-center">
+          <p className="text-[18px] text-gray-100 text-center">
             The best prices for over 2 million properties worldwide
           </p>
         </div>
