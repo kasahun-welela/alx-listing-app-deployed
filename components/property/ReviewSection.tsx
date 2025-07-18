@@ -1,14 +1,26 @@
-const ReviewSection: React.FC<{ reviews: any[] }> = ({ reviews }) => {
+import Image from "next/image";
+
+interface Review {
+  id: string;
+  name: string;
+  rating: number;
+  comment: string;
+  avatar: string;
+}
+
+const ReviewSection: React.FC<{ reviews: Review[] }> = ({ reviews }) => {
   return (
     <div className="mt-8">
       <h3 className="text-2xl font-semibold">Reviews</h3>
       {reviews.map((review, index) => (
         <div key={index} className="border-b pb-4 mb-4">
           <div className="flex items-center">
-            <img
+            <Image
               src={review.avatar}
               alt={review.name}
               className="w-12 h-12 rounded-full mr-4"
+              width={48}
+              height={48}
             />
             <div>
               <p className="font-bold">{review.name}</p>
